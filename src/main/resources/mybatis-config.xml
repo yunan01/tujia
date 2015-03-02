@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<settings>
+		<!-- 将下划线字段名称映射为驼峰变量  -->
+		<setting name="mapUnderscoreToCamelCase" value="true" />  
+		
+		<!-- 进制mybatis进行延迟加载 -->
+		<setting name="lazyLoadingEnabled" value="false"/>
+		<setting name="logImpl" value="SLF4J"/>
+	</settings>
+	<!-- 拦截器 -->
+		<!-- <plugins>
+		<plugin interceptor="com.niux.crm.dao.common.StatementInterceptor" />
+		<plugin interceptor="com.niux.crm.dao.common.ResultSetInterceptor" />
+		<plugin interceptor="com.niux.crm.aop.db.MappInterceptor" /></plugins>
+		 -->
+	<plugins>
+		<plugin interceptor="com.niux.common.utils.LbcMybatisInterceptor">
+		</plugin>
+	</plugins>
+</configuration>

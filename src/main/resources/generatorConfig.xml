@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE generatorConfiguration  
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"  
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+	<!-- <context id="DB2Tables" targetRuntime="MyBatis3"> <commentGenerator> 
+		<property name="suppressAllComments" value="true" /> </commentGenerator> 
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://10.94.46.51:8601/niux_poi" 
+		userId="test" password="sewtdfwtest" /> <javaTypeResolver type="com.niux.poi.utils.JavaTypeResolverPOIImpl" 
+		/> <javaModelGenerator targetPackage="com.niux.poi.model" targetProject="src/main/java" 
+		> <property name= "enableSubPackages" value ="true" /> <property name= "trimStrings" 
+		value ="true" /> </javaModelGenerator> <sqlMapGenerator targetPackage="com.niux.poi.mapper.xml.base" 
+		targetProject="src/main/resources" > <property name= "enableSubPackages" 
+		value ="true" /> </sqlMapGenerator> <javaClientGenerator type= "XMLMAPPER" 
+		targetPackage="com.niux.poi.mapper.base" targetProject="src/main/java" > 
+		<property name= "enableSubPackages" value ="true" /> </javaClientGenerator> 
+		<table tableName="bc_separation" domainObjectName="BcSeparation" enableCountByExample="true" 
+		enableUpdateByExample= "true" enableDeleteByExample="true" enableSelectByExample= 
+		"true" selectByExampleQueryId="true" /> <table tableName="tp_firm_tp_poi_relation" 
+		domainObjectName="TpFirmTpPoiRelation" enableCountByExample="true" enableUpdateByExample= 
+		"true" enableDeleteByExample="true" enableSelectByExample= "true" selectByExampleQueryId="true" 
+		/> </context> -->
+	<context id="orgOrg" targetRuntime="MyBatis3">
+
+		<commentGenerator>
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator>
+
+
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://127.0.0.1:3306/hr_tujia" userId="root"
+			password="" />
+
+	<!-- 	<javaTypeResolver type="com.niux.poi.utils.JavaTypeResolverPOIImpl" />
+ -->
+		<javaModelGenerator targetPackage="com.tujia.org.model"
+			targetProject="src/main/java">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+
+		<sqlMapGenerator targetPackage="com.tujia.org.mapper.xml"
+			targetProject="src/main/resources">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+
+		<javaClientGenerator type="XMLMAPPER"
+			targetPackage="com.tujia.org.mapper" targetProject="src/main/java">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+
+		<table tableName="org_org" domainObjectName="OrgOrg"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false" />
+	</context>
+</generatorConfiguration>
